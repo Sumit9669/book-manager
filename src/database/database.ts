@@ -73,9 +73,11 @@ class Database {
 
   constructor() {
     const url =
-      "mongodb+srv://duser:userDUser@cluster0.jwkzxtx.mongodb.net/?retryWrites=true&w=majority"; // `mongodb+srv://testUser:K0PGiIxPRfLxROUf​​@cluster0.jwkzxtx.mongodb.net/?retryWrites=true&w=majority`;
+      "mongodb+srv://<username>:<pass>@cluster0.jwkzxtx.mongodb.net/?retryWrites=true&w=majority";
+    // coment above line and uncomment below line in case of testeing with cluster setup on server
+    //`mongodb+srv://${this.user}:${this.pass}@cluster0.jwkzxtx.mongodb.net/?retryWrites=true&w=majority`;
+    // umcommnet below line to setup mongo with local
     // `mongodb://${this.user}:${this.pass}@${this.host}​​​​​​​​:${this.port}​​​​​​​​​​​​​​​​?connectTimeoutMS=10000`;
-    // const adminDbUrl = `mongodb://${this.adminDbUser}:${this.adminDbPass}@${this.adminDbHost}​​​​​​​​:${this.adminDbPort}​​​​​​​​​​​​​​​​?connectTimeoutMS=10000`;
     const clientOption = {
       socketTimeoutMS: 30000,
       useNewUrlParser: true,
